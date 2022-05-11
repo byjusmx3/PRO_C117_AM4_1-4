@@ -13,30 +13,30 @@ for file in os.listdir(path):
     if ext in ['.gif', '.png', '.jpg', '.jpeg','.jfif']:
         file_name = path+"/"+file
 
-        #print(file_name)
+        #imprime(file_name)
                
         images.append(file_name)
         
-#print(len(images))
+#imprime(len(images))
 count = len(images)
 
 frame = cv2.imread(images[0])
 height, width, channels = frame.shape
 size = (width,height)
-#print(size)
+#imprime(size)
 
 
 out = cv2.VideoWriter('project.mp4',cv2.VideoWriter_fourcc(*'DIVX'), 5, size)
 
-#For SUNSET
-#for i in range(0,count-1):
+#PARA EL ATARDECER
+#Para i en el rango(0,count-1):
 
-#For SUNRISE
+#PARA EL AMANECER
 for i in range(count-1,0,-1):
     frame = cv2.imread(images[i])
     out.write(frame)
     
-out.release() # releasing the video generated
+out.release() # liberar el video generado
 print("Done")
 
 
