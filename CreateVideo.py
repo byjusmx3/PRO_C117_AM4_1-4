@@ -37,6 +37,6 @@ for i in range(count-1,0,-1):
     out.write(frame)
     
 out.release() # liberar el video generado
-print("Done")
+print("Listo")
 
 
