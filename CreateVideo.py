@@ -29,7 +29,7 @@ size = (width,height)
 out = cv2.VideoWriter('project.mp4',cv2.VideoWriter_fourcc(*'DIVX'), 5, size)
 
 #PARA EL ATARDECER
-#Para i en el rango(0,count-1):
+#for i in range(0,count-1):
 
 #PARA EL AMANECER
 for i in range(count-1,0,-1):
